@@ -1,0 +1,175 @@
+
+
+1.清空字典中元素清空，dict变为{}
+
+    L.clear()-> None.  Remove all items from L
+
+>>> L ={'shaw':23,'sam':36,"eric":40}
+
+>>> L.clear()
+
+>>> print L
+
+{}
+
+2.返回一个字典的浅复制
+
+    L.copy()-> a shallow copy of L
+
+>>> L ={'shaw':23,'sam':36,"eric":40}
+
+>>> L.copy()
+
+{'shaw': 23, 'sam': 36,'eric': 40}
+
+3.用于创建一个新字典，以序列seq中元素做字典的键，value为字典所有键对应的初始值(默认为“None”)
+
+    Lict.fromkeys(S[,v])-> New Lict with keys from S and values equal to v. v defaults toNone.
+
+>>> seq =('shaw','sam','stiven')
+
+>>> name =dict.fromkeys(seq)
+
+>>> print"listone :{}".format(name)
+
+listone :{'stiven': None,'shaw': None, 'sam': None}
+
+>>> name =dict.fromkeys(seq,1000)
+
+>>> print"listone :{}".format(name)
+
+listone :{'stiven': 1000,'shaw': 1000, 'sam': 1000}
+
+4．返回指定键的值，如果值不在字典中返回默认值(None)
+
+    D.get(k[,d])-> D[k] if k in D, else d.  d defaultsto None.
+
+>>> L ={'shaw':23,'sam':36,"eric":40}
+
+>>> L.get('shaw')
+
+23
+
+>>> printL.get('stiven')
+
+None
+
+5．用于判断键是否存在于字典中，如果键在字典dict里返回true，否则返回false
+
+    L.has_key(k) -> True if D has a key k,else False
+
+>>> L ={'shaw':23,'sam':36,"eric":40}
+
+>>> L.has_key('sam')
+
+True
+
+>>>L.has_key('linux')
+
+False
+
+6.以列表的方式返回可遍历的(键, 值) 元组（键值对）
+
+    L.items()-> list of D's (key, value) pairs, as 2-tuples
+
+>>> L ={'shaw':23,'sam':36,"eric":40}
+
+>>> L.items()
+
+[('shaw', 23), ('sam', 36),('eric', 40)]
+
+ 
+
+7.以列表的方式返回一个字典所有的键
+
+    L.keys()-> a set-like object providing a view on L's keys
+
+>>> L ={'shaw':23,'sam':36,"eric":40}
+
+>>> L.keys()
+
+['shaw', 'sam', 'eric']
+
+8.删除某个键值对
+
+    D.pop(k[,d])-> v, remove specified key and return the corresponding value. If key is notfound, d is returned if given, otherwise KeyError is raised
+
+>>> L ={'shaw':23,'sam':36,"eric":40}
+
+>>> L.pop('sam')
+
+36
+
+>>> L
+
+{'shaw': 23, 'eric': 40}
+
+9.默认删除字典中第一个键值对
+
+    D.popitem()-> (k, v), remove and return some (key, value) pair as a 2-tuple; but raise KeyError if D is empty.
+
+>>> L ={'shaw':23,'sam':36,"eric":40}
+
+>>> L.popitem()
+
+('shaw', 23)
+
+>>> L
+
+{'sam': 36, 'eric': 40}
+
+10. setdefault()方法和get()方法类似，如果键不已经存在于字典中，将会添加键并将值设为默认值（如果dict中已有a,则不会被覆盖）
+
+    D.setdefault(k[,d]) ->D.get(k,d), also set D[k]=d if k not in D
+
+>>> L ={'shaw':23,'sam':36,"eric":40}
+
+>>>L.setdefault('stiven')
+
+>>> L
+
+{'stiven': None, 'shaw': 23,'sam': 36, 'eric': 40}
+
+>>>L.setdefault('mira',65)
+
+65
+
+>>> L
+
+{'stiven': None, 'mira': 65,'shaw': 23, 'sam': 36, 'eric': 40}
+
+>>>L.setdefault('shaw',18)
+
+23
+
+>>> L
+
+{'stiven': None, 'mira': 65,'shaw': 23, 'sam': 36, 'eric': 40}
+
+11.把字典dict2的键/值对更新到dict里
+
+    L.update()
+
+>>> L ={'shaw':23,'sam':36,"eric":40}
+
+>>> A ={'book':45,'apple':13}
+
+>>> L.update(A)
+
+>>> L
+
+{'book': 45, 'apple': 13,'shaw': 23, 'sam': 36, 'eric': 40}
+
+12．返回dic所有的值
+
+    L.values(…)
+
+>>> L = {'book':45,'apple':13}
+
+>>> L.values()
+
+[45, 13]
+
+ 
+
+

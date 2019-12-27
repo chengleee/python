@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="zh-cn"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>一、Python 模块EasyGui详细介绍 - 无知小德 - 博客园</title>
+<link type="text/css" rel="stylesheet" href="easygui%E5%AD%A6%E4%B9%A0%E6%96%87%E6%A1%A3_files/blog-common.css">
+<link id="MainCss" type="text/css" rel="stylesheet" href="easygui%E5%AD%A6%E4%B9%A0%E6%96%87%E6%A1%A3_files/bundle-coffee.css">
+<link id="mobile-style" media="only screen and (max-width: 767px)" type="text/css" rel="stylesheet" href="easygui%E5%AD%A6%E4%B9%A0%E6%96%87%E6%A1%A3_files/bundle-coffee-mobile.css">
+<link title="RSS" type="application/rss+xml" rel="alternate" href="http://www.cnblogs.com/bldly1989/rss">
+<link title="RSD" type="application/rsd+xml" rel="EditURI" href="http://www.cnblogs.com/bldly1989/rsd.xml">
+<link type="application/wlwmanifest+xml" rel="wlwmanifest" href="http://www.cnblogs.com/bldly1989/wlwmanifest.xml">
+<script async="" src="easygui%E5%AD%A6%E4%B9%A0%E6%96%87%E6%A1%A3_files/analytics.js"></script><script type="text/javascript" src="easygui%E5%AD%A6%E4%B9%A0%E6%96%87%E6%A1%A3_files/encoder.js"></script><script src="easygui%E5%AD%A6%E4%B9%A0%E6%96%87%E6%A1%A3_files/jquery-2.js"></script>
+<script type="text/javascript">var currentBlogApp = 'bldly1989', cb_enable_mathjax=false;var isLogined=false;</script>
+<script src="easygui%E5%AD%A6%E4%B9%A0%E6%96%87%E6%A1%A3_files/blog-common.js" type="text/javascript"></script>
+</head>
+<body>
+<a name="top"></a>
+
+<!--done-->
+<div id="home">
+<div id="header">
+	<div id="blogTitle">
+	<a id="lnkBlogLogo" href="http://www.cnblogs.com/bldly1989/"><img id="blogLogo" src="easygui%E5%AD%A6%E4%B9%A0%E6%96%87%E6%A1%A3_files/logo.gif" alt="返回主页"></a>			
+		
+<!--done-->
+<h1><a id="Header1_HeaderTitle" class="headermaintitle" href="http://www.cnblogs.com/bldly1989/">无知小德</a></h1>
+<h2></h2>
+
+
+
+		
+	</div><!--end: blogTitle 博客的标题和副标题 -->
+</div><!--end: header 头部 -->
+
+<div id="main">
+	<div id="mainContent">
+	<div class="forFlow">
+		<div id="navigator">
+			
+<ul id="navList">
+	<li><a id="blog_nav_sitehome" class="menu" href="http://www.cnblogs.com/">博客园</a></li>
+	<li><a id="blog_nav_myhome" class="menu" href="http://www.cnblogs.com/bldly1989/">首页</a></li>
+	<li><a id="blog_nav_newpost" class="menu" rel="nofollow" href="https://i.cnblogs.com/EditPosts.aspx?opt=1">新随笔</a></li>
+	<li><a id="blog_nav_contact" accesskey="9" class="menu" rel="nofollow" href="https://msg.cnblogs.com/send/%E6%97%A0%E7%9F%A5%E5%B0%8F%E5%BE%B7">联系</a></li>
+	<li><a id="blog_nav_admin" class="menu" rel="nofollow" href="https://i.cnblogs.com/">管理</a></li>
+	<li><a id="blog_nav_rss" class="menu" href="http://www.cnblogs.com/bldly1989/rss">订阅</a>
+	<a id="blog_nav_rss_image" class="aHeaderXML" href="http://www.cnblogs.com/bldly1989/rss"><img src="easygui%E5%AD%A6%E4%B9%A0%E6%96%87%E6%A1%A3_files/xml.gif" alt="订阅"></a></li>
+</ul>
+
+
+			<div class="blogStats">
+				
+				<div id="blog_stats">
+<!--done-->
+随笔- 51&nbsp;
+文章- 0&nbsp;
+评论- 1&nbsp;
+</div>
+				
+			</div><!--end: blogStats -->
+		</div><!--end: navigator 博客导航栏 -->
+		
+<div id="post_detail">
+<!--done-->
+<div id="topics">
+	<div class="post">
+		<h1 class="postTitle">
+			<a id="cb_post_title_url" class="postTitle2" href="https://www.cnblogs.com/bldly1989/p/6651855.html">一、Python 模块EasyGui详细介绍</a>
+		</h1>
+		<div class="clear"></div>
+		<div class="postBody">
+			<div id="cnblogs_post_body" class="blogpost-body"><h1><strong>Python 模块EasyGui详细介绍</strong></h1>
+<ul>
+<li>
+<h3>EasyGui 官网:</h3>
+</li>
+</ul>
+<h3>　　-http://easygui.sourceforge.net</h3>
+<ul>
+<li>
+<h3>官方的教学文档：</h3>
+</li>
+</ul>
+<h3>　　-easygui-docs-0.96\tutorial\index.html</h3>
+<ul>
+<li>
+<h3>小甲鱼翻译改编的教学文档：　</h3>
+</li>
+</ul>
+<h3>&nbsp;　　-http://bbs.fishc.com/thread-46069-1-1.html</h3>
+<p>在Windows想用Python开发一些简单的界面，所以找到了很容易上手的EasyGui库。下面就分享一下简单的使用吧。</p>
+<p>接下来，我将从简单，到复杂一点点的演示如何使用这个模块。希望能给刚接触easygui的你一点帮助:</p>
+<p>根据需求，EasyGui在buttonbox()上建立了一系列的函数供调用。</p>
+<p><strong>1、msgBox</strong></p>
+<p><strong>msgbox(msg='(Your message goes here)', title=' ', ok_button='OK', image=None, root=None)</strong></p>
+<p>msgbox() 显示一个消息和提供一个"OK"按钮，你可以指定任意的消息和标题，你甚至可以重写"OK"按钮的内容。 以下是 msgbox() 的实例函数:</p>
+<div class="cnblogs_code"><div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img src="easygui%E5%AD%A6%E4%B9%A0%E6%96%87%E6%A1%A3_files/copycode.gif" alt="复制代码"></a></span></div>
+<pre><span style="color: #008080"> 1</span> <span style="color: #008000">#</span><span style="color: #008000">！/usr/bin/env python</span>
+<span style="color: #008080"> 2</span> <span style="color: #008000">#</span><span style="color: #008000"> -*- coding:utf-8 -*-</span>
+<span style="color: #008080"> 3</span> <span style="color: #008000">#</span><span style="color: #008000"> __Author__ = "Ma Qing"</span>
+<span style="color: #008080"> 4</span> <span style="color: #008000">#</span><span style="color: #008000"> __date__ = "2017/03/31"</span>
+<span style="color: #008080"> 5</span> <span style="color: #008000">#</span><span style="color: #008000"> __Desc__ = 一个最简单的类似于Java的MessageBox的小窗口</span>
+<span style="color: #008080"> 6</span> 
+<span style="color: #008080"> 7</span> <span style="color: #0000ff">import</span><span style="color: #000000"> easygui as g
+</span><span style="color: #008080"> 8</span> <span style="color: #008000">#</span><span style="color: #008000">对于大部分的EasyGui函数都有默认参数，几乎所有的组件都会显示一个消息和标题。</span>
+<span style="color: #008080"> 9</span> <span style="color: #008000">#</span><span style="color: #008000">标题默认是空字符串，信息通畅有一个简单的默认值</span>
+<span style="color: #008080">10</span> <span style="color: #008000">#</span><span style="color: #008000">比如msgbox()函数标题部分的参数就是可选的，所以你调用msgbox的时候可以指定一个消息参数，例如：</span>
+<span style="color: #008080">11</span> msg = g.msgbox(<span style="color: #800000">"</span><span style="color: #800000">Hello Easy GUI</span><span style="color: #800000">"</span><span style="color: #000000">)
+</span><span style="color: #008080">12</span> <span style="color: #008000">#</span><span style="color: #008000">当然你也可以指定信息参数和标题参数</span>
+<span style="color: #008080">13</span> title = g.msgbox(msg=<span style="color: #800000">"</span><span style="color: #800000">我一定要学会编程！</span><span style="color: #800000">"</span>,title=<span style="color: #800000">"</span><span style="color: #800000">标题部分</span><span style="color: #800000">"</span>,ok_button=<span style="color: #800000">"</span><span style="color: #800000">加油</span><span style="color: #800000">"</span><span style="color: #000000">)</span><span style="color: #008080"><br></span></pre>
+<div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img src="easygui%E5%AD%A6%E4%B9%A0%E6%96%87%E6%A1%A3_files/copycode.gif" alt="复制代码"></a></span></div></div>
+<p><img src="easygui%E5%AD%A6%E4%B9%A0%E6%96%87%E6%A1%A3_files/1115627-20170331153205961-1886092566.png" alt=""></p>
+<p><strong>2、ccbox()</strong></p>
+<p><strong>ccbox(msg='Shall I continue?', title=' ', choices=('Continue', 'Cancel'), image=None) </strong></p>
+<p>ccbox() 提供一个选择：Continue 或者 Cancel，并相应的返回 1（选中Continue）或者 0（选中Cancel）。注意 ccbox() 是返回整型的 1 或 0，不是布尔类型的 True 或 False。但你仍然可以这么写：</p>
+<div class="cnblogs_code">
+<pre><span style="color: #008080">1</span> <span style="color: #0000ff">import</span><span style="color: #000000"> sys
+</span><span style="color: #008080">2</span> <span style="color: #0000ff">import</span><span style="color: #000000"> easygui as g
+</span><span style="color: #008080">3</span> <span style="color: #0000ff">if</span> g.ccbox(<span style="color: #800000">"</span><span style="color: #800000">亲爱的还玩吗?</span><span style="color: #800000">"</span>,choices=(<span style="color: #800000">"</span><span style="color: #800000">还要玩！</span><span style="color: #800000">"</span>,<span style="color: #800000">"</span><span style="color: #800000">算了吧/(ㄒoㄒ)/~~</span><span style="color: #800000">"</span><span style="color: #000000">)):
+</span><span style="color: #008080">4</span>     g.msgbox(<span style="color: #800000">"</span><span style="color: #800000">还是不玩了，快睡觉吧！</span><span style="color: #800000">"</span><span style="color: #000000">)
+</span><span style="color: #008080">5</span> <span style="color: #0000ff">else</span><span style="color: #000000">:
+</span><span style="color: #008080">6</span>     sys.exit(0)</pre>
+</div>
+<p><img src="easygui%E5%AD%A6%E4%B9%A0%E6%96%87%E6%A1%A3_files/1115627-20170331153906055-1679355829.png" alt=""></p>
+<p><strong>3、ynbox()</strong></p>
+<p>老实说，这个函数和ccbox()功能一模一样。。。。。一下省略好几十字。。。</p>
+<p><strong>4、buttombox()</strong></p>
+<p><strong>buttonbox(msg='', title=' ', choices=('Button1', 'Button2', 'Button3'), image=None, root=None)</strong></p>
+<p>可以使用 buttonbox() 定义自己的一组按钮，buttonbox() 会显示一组你定义好的按钮。</p>
+<p>当用户点击任意一个按钮的时候，buttonbox() 返回按钮的文本内容。如果用户取消取消或者关闭窗口，那么会返回默认选项（第一个选项）。请看例子：</p>
+<div class="cnblogs_code">
+<pre><span style="color: #008080">1</span> <span style="color: #0000ff">import</span><span style="color: #000000"> easygui as g
+</span><span style="color: #008080">2</span> g.buttonbox(msg=<span style="color: #800000">"</span><span style="color: #800000">你喜欢下面哪种水果?</span><span style="color: #800000">"</span>,title=<span style="color: #800000">""</span>,choices=(<span style="color: #800000">"</span><span style="color: #800000">西瓜</span><span style="color: #800000">"</span>,<span style="color: #800000">"</span><span style="color: #800000">苹果</span><span style="color: #800000">"</span>,<span style="color: #800000">"</span><span style="color: #800000">草莓</span><span style="color: #800000">"</span>))</pre>
+</div>
+<p><img src="easygui%E5%AD%A6%E4%B9%A0%E6%96%87%E6%A1%A3_files/1115627-20170331154637180-898700235.png" alt=""></p>
+<p><strong>5、indexbox()</strong></p>
+<p><strong>indexbox(msg='Shall I continue?', title=' ', choices=('Yes', 'No'), image=None)</strong>&nbsp;</p>
+<p>基本跟上面一样，区别就是当用户选择第一个按钮的时候返回序列号0，选择第二个按钮时候返回序列号1。</p>
+<p><strong>6、boolbox()</strong></p>
+<p><strong>boolbox(msg='Shall I continue?', title=' ', choices=('Yes', 'No'), image=None)</strong>&nbsp;</p>
+<p>如果第一个按钮被选中则返回 1，否则返回 0。</p>
+<p><strong>7、在buttonbox()中显示图片</strong></p>
+<p>当你调用一个 buttonbox 函数（例如 msgbox(), ynbox(), indexbox() 等等）的时候，</p>
+<p>你还可以为关键字参数 image 赋值，这是设置一个 .gif 格式的图像（注意仅支持 GIF 格式哦）：</p>
+<div class="cnblogs_code">
+<pre><span style="color: #008080">1</span> <span style="color: #0000ff">import</span><span style="color: #000000"> easygui as g
+</span><span style="color: #008080">2</span> g.buttonbox(<span style="color: #800000">"</span><span style="color: #800000">大家说嗅嗅可爱吗?</span><span style="color: #800000">"</span>,image=<span style="color: #800000">"</span><span style="color: #800000">xiuxiu.gif</span><span style="color: #800000">"</span>,choices=(<span style="color: #800000">"</span><span style="color: #800000">可爱</span><span style="color: #800000">"</span>,<span style="color: #800000">"</span><span style="color: #800000">不可爱</span><span style="color: #800000">"</span>,<span style="color: #800000">"</span><span style="color: #800000">财迷</span><span style="color: #800000">"</span>))</pre>
+</div>
+<p><img src="easygui%E5%AD%A6%E4%B9%A0%E6%96%87%E6%A1%A3_files/1115627-20170331155935477-1306300710.png" alt=""></p>
+<p><strong>&nbsp;8、choicebox()</strong></p>
+<p><strong>choicebox(msg='Pick something.', title=' ', choices=()) &nbsp;</strong></p>
+<p>按钮组件方便提供用户一个简单的按钮选项，但如果有很多选项，或者选项的内容特别长的话，更好的策略是为它们提供一个可选择的列表。</p>
+<p>choicebox() 为用户提供了一个可选择的列表，使用序列（元祖或列表）作为选项，这些选项显示前会按照不区分大小写的方法排好序。 &nbsp;</p>
+<p>另外还可以使用键盘来选择其中一个选项（比较纠结，但一点儿都不重要）： &nbsp;</p>
+<ul>
+<li>例如当按下键盘上的"g"键，将会选中的第一个以"g"开头的选项。</li>
+<li>再次按下"g"键，则会选中下一个以"g"开头的选项。</li>
+<li>在选中最后一个以"g"开头的选项的时候，再次按下"g"键将重新回到在列表的开头的第一个以"g"开头的选项。</li>
+<li>如果选项中没有以"g"开头的，则会选中字符排序在"g"之前（"f"）的那个字符开头的选项。</li>
+<li>如果选项中没有字符的排序在"g"之前的，那么在列表中第一个元素将会被选中。 &nbsp;</li>
+</ul>
+<p>综合我们之前学习的文件功能，举个通俗的例子</p>
+<div class="cnblogs_code">
+<pre><span style="color: #008080">1</span> <span style="color: #0000ff">import</span><span style="color: #000000"> easygui as g
+</span><span style="color: #008080">2</span> 
+<span style="color: #008080">3</span> msg = <span style="color: #800000">"</span><span style="color: #800000">选择你喜欢的一种业余生活</span><span style="color: #800000">"</span>
+<span style="color: #008080">4</span> title = <span style="color: #800000">""</span>
+<span style="color: #008080">5</span> choicess_list = [<span style="color: #800000">"</span><span style="color: #800000">看书</span><span style="color: #800000">"</span>,<span style="color: #800000">"</span><span style="color: #800000">游泳</span><span style="color: #800000">"</span>,<span style="color: #800000">"</span><span style="color: #800000">骑自行车</span><span style="color: #800000">"</span>,<span style="color: #800000">"</span><span style="color: #800000">玩游戏</span><span style="color: #800000">"</span><span style="color: #000000">]
+</span><span style="color: #008080">6</span> reply = g.choicebox(msg,choices=choicess_list)</pre>
+</div>
+<p><strong>&nbsp;9、mutchoicebox()</strong></p>
+<p><strong>multchoicebox(msg='Pick as many items as you like.', title=' ', choices=(), **kwargs)</strong></p>
+<p>multchoicebox() 函数也是提供一个可选择的列表，与 choicebox() 不同的是，multchoicebox() 支持用户选择 0 个，1 个或者同时选择多个选项。 <br>multchoicebox() 函数也是使用序列（元祖或列表）作为选项，这些选项显示前会按照不区分大小写的方法排好序。</p>
+<div class="cnblogs_code">
+<pre><span style="color: #008080">1</span> <span style="color: #0000ff">import</span><span style="color: #000000"> easygui as g
+</span><span style="color: #008080">2</span> g.multchoicebox(msg=<span style="color: #800000">"</span><span style="color: #800000">请选择你爱吃哪些水果?</span><span style="color: #800000">"</span>,title=<span style="color: #800000">""</span>,choices=(<span style="color: #800000">"</span><span style="color: #800000">西瓜</span><span style="color: #800000">"</span>,<span style="color: #800000">"</span><span style="color: #800000">香蕉</span><span style="color: #800000">"</span>,<span style="color: #800000">"</span><span style="color: #800000">苹果</span><span style="color: #800000">"</span>,<span style="color: #800000">"</span><span style="color: #800000">梨</span><span style="color: #800000">"</span>))</pre>
+</div>
+<p><img src="easygui%E5%AD%A6%E4%B9%A0%E6%96%87%E6%A1%A3_files/1115627-20170401083922883-1073183086.png" alt="" width="590" height="228"></p>
+<p><strong>10、enterbox()</strong></p>
+<p><strong>enterbox(msg='Enter something.', title=' ', default='', strip=True, image=None, root=None)</strong></p>
+<p>enterbox() 为用户提供一个最简单的输入框，返回值为用户输入的字符串。</p>
+<p>默认返回的值会自动去除首尾的空格，如果需要保留首尾空格的话请设置参数 strip=False。</p>
+<div class="cnblogs_code">
+<pre><span style="color: #008080">1</span> <span style="color: #0000ff">import</span><span style="color: #000000"> easygui as g
+</span><span style="color: #008080">2</span> g.enterbox(msg=<span style="color: #800000">"</span><span style="color: #800000">请说出此时你的心里话</span><span style="color: #800000">"</span>,title=<span style="color: #800000">"</span><span style="color: #800000">心里悄悄话</span><span style="color: #800000">"</span>)</pre>
+</div>
+<p><img src="easygui%E5%AD%A6%E4%B9%A0%E6%96%87%E6%A1%A3_files/1115627-20170401084532102-1514590128.png" alt=""></p>
+<address><strong>11、interbox()</strong></address><address>
+<p><strong>integerbox(msg='', title=' ', default='', lowerbound=0, upperbound=99, image=None, root=None, **invalidKeywordArguments)</strong></p>
+<p>integerbox() 为用户提供一个简单的输入框，用户只能输入范围内（lowerbound参数设置最小值，upperbound参数设置最大值）的整型数值，否则会要求用户重新输入。</p>
+</address>
+<div class="cnblogs_code">
+<pre><span style="color: #008080">1</span> <span style="color: #0000ff">import</span><span style="color: #000000"> easygui as g
+</span><span style="color: #008080">2</span> g.integerbox(msg=<span style="color: #800000">"</span><span style="color: #800000">请输入您的得分</span><span style="color: #800000">"</span>,title=<span style="color: #800000">"</span><span style="color: #800000">分数统计</span><span style="color: #800000">"</span>,lowerbound=0,upperbound=100)</pre>
+</div>
+<p><img src="easygui%E5%AD%A6%E4%B9%A0%E6%96%87%E6%A1%A3_files/1115627-20170401084927195-499772864.png" alt=""></p>
+<p><strong>12、mulenterbox()</strong></p>
+<p><strong>multenterbox(msg='Fill in values for the fields.', title=' ', fields=(), values=())</strong></p>
+<p>multenterbox() 为用户提供多个简单的输入框，要注意以下几点：</p>
+<ul>
+<li>如果用户输入的值比选项少的话，则返回列表中的值用空字符串填充用户为输入的选项。</li>
+<li>如果用户输入的值比选项多的话，则返回的列表中的值将截断为选项的数量。</li>
+<li>如果用户取消操作，则返回域中的列表的值或者None值</li>
+</ul>
+<div class="cnblogs_code"><div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img src="easygui%E5%AD%A6%E4%B9%A0%E6%96%87%E6%A1%A3_files/copycode.gif" alt="复制代码"></a></span></div>
+<pre><span style="color: #008080"> 1</span> <span style="color: #0000ff">import</span><span style="color: #000000"> easygui as g
+</span><span style="color: #008080"> 2</span> 
+<span style="color: #008080"> 3</span> msg = <span style="color: #800000">"</span><span style="color: #800000">请填写一下信息(其中带*号的项为必填项)</span><span style="color: #800000">"</span>
+<span style="color: #008080"> 4</span> title = <span style="color: #800000">"</span><span style="color: #800000">账号中心</span><span style="color: #800000">"</span>
+<span style="color: #008080"> 5</span> fieldNames = [<span style="color: #800000">"</span><span style="color: #800000">*用户名</span><span style="color: #800000">"</span>,<span style="color: #800000">"</span><span style="color: #800000">*真实姓名</span><span style="color: #800000">"</span>,<span style="color: #800000">"</span><span style="color: #800000">固定电话</span><span style="color: #800000">"</span>,<span style="color: #800000">"</span><span style="color: #800000">*手机号码</span><span style="color: #800000">"</span>,<span style="color: #800000">"</span><span style="color: #800000">QQ</span><span style="color: #800000">"</span>,<span style="color: #800000">"</span><span style="color: #800000">*Email</span><span style="color: #800000">"</span><span style="color: #000000">]
+</span><span style="color: #008080"> 6</span> fieldValues =<span style="color: #000000"> []
+</span><span style="color: #008080"> 7</span> fieldValues =<span style="color: #000000"> g.multenterbox(msg,title,fieldNames)
+</span><span style="color: #008080"> 8</span> <span style="color: #008000">#</span><span style="color: #008000">print(fieldValues)</span>
+<span style="color: #008080"> 9</span> <span style="color: #0000ff">while</span><span style="color: #000000"> True:
+</span><span style="color: #008080">10</span>     <span style="color: #0000ff">if</span> fieldValues ==<span style="color: #000000"> None :
+</span><span style="color: #008080">11</span>         <span style="color: #0000ff">break</span>
+<span style="color: #008080">12</span>     errmsg = <span style="color: #800000">""</span>
+<span style="color: #008080">13</span>     <span style="color: #0000ff">for</span> i <span style="color: #0000ff">in</span><span style="color: #000000"> range(len(fieldNames)):
+</span><span style="color: #008080">14</span>         option =<span style="color: #000000"> fieldNames[i].strip()
+</span><span style="color: #008080">15</span>         <span style="color: #0000ff">if</span> fieldValues[i].strip() == <span style="color: #800000">""</span> <span style="color: #0000ff">and</span> option[0] == <span style="color: #800000">"</span><span style="color: #800000">*</span><span style="color: #800000">"</span><span style="color: #000000">:
+</span><span style="color: #008080">16</span>             errmsg += (<span style="color: #800000">"</span><span style="color: #800000">【%s】为必填项   </span><span style="color: #800000">"</span> %<span style="color: #000000">fieldNames[i])
+</span><span style="color: #008080">17</span>     <span style="color: #0000ff">if</span> errmsg == <span style="color: #800000">""</span><span style="color: #000000">:
+</span><span style="color: #008080">18</span>         <span style="color: #0000ff">break</span>
+<span style="color: #008080">19</span>     fieldValues =<span style="color: #000000"> g.multenterbox(errmsg,title,fieldNames,fieldValues)
+</span><span style="color: #008080">20</span> <span style="color: #0000ff">print</span>(<span style="color: #800000">"</span><span style="color: #800000">您填写的资料如下:%s</span><span style="color: #800000">"</span> %str(fieldValues))</pre>
+<div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img src="easygui%E5%AD%A6%E4%B9%A0%E6%96%87%E6%A1%A3_files/copycode.gif" alt="复制代码"></a></span></div></div>
+<p><img src="easygui%E5%AD%A6%E4%B9%A0%E6%96%87%E6%A1%A3_files/1115627-20170401091509570-1920170531.png" alt=""></p>
+<p><strong>13、passwordbox()</strong></p>
+<p><strong>passwordbox(msg='Enter your password.', title=' ', default='', image=None, root=None)</strong></p>
+<p>passwordbox() 跟 enterbox() 样式一样，不同的是用户输入的内容用"*"显示出来，返回用户输入的字符串：</p>
+<div class="cnblogs_code">
+<pre><span style="color: #008080">1</span> <span style="color: #0000ff">import</span><span style="color: #000000"> easygui as g
+</span><span style="color: #008080">2</span> g.passwordbox(msg=<span style="color: #800000">"</span><span style="color: #800000">请输入您的密码</span><span style="color: #800000">"</span>)</pre>
+</div>
+<p><img src="easygui%E5%AD%A6%E4%B9%A0%E6%96%87%E6%A1%A3_files/1115627-20170401091845445-697911673.png" alt=""></p>
+<div class="cnblogs_code">
+<pre><span style="color: #008080">1</span> <span style="color: #0000ff">import</span><span style="color: #000000"> easygui as g
+</span><span style="color: #008080">2</span> msg = <span style="color: #800000">"</span><span style="color: #800000">请输入你的密码</span><span style="color: #800000">"</span>
+<span style="color: #008080">3</span> user_password =<span style="color: #000000"> g.passwordbox(msg)
+</span><span style="color: #008080">4</span> <span style="color: #0000ff">print</span>(str(user_password))</pre>
+</div>
+<p><strong>14、multpasswordbox()</strong></p>
+<p><strong>multpasswordbox(msg='Fill in values for the fields.', title=' ', fields=(), values=())</strong></p>
+<p>multpasswordbox() 跟 multenterbox() 使用相同的接口，但当它显示的时候，最后一个输入框显示为密码的形式（"*"）：</p>
+<div class="cnblogs_code">
+<pre><span style="color: #008080">1</span> <span style="color: #0000ff">import</span><span style="color: #000000"> easygui as g
+</span><span style="color: #008080">2</span> msg = <span style="color: #800000">"</span><span style="color: #800000">请输入用户名和密码</span><span style="color: #800000">"</span>
+<span style="color: #008080">3</span> title = <span style="color: #800000">"</span><span style="color: #800000">用户登录接口</span><span style="color: #800000">"</span>
+<span style="color: #008080">4</span> user_info =<span style="color: #000000"> []
+</span><span style="color: #008080">5</span> user_info = g.multpasswordbox(msg,title,(<span style="color: #800000">"</span><span style="color: #800000">用户名</span><span style="color: #800000">"</span>,<span style="color: #800000">"</span><span style="color: #800000">密码</span><span style="color: #800000">"</span><span style="color: #000000">))
+</span><span style="color: #008080">6</span> <span style="color: #0000ff">print</span>(user_info)</pre>
+</div>
+<p><img src="easygui%E5%AD%A6%E4%B9%A0%E6%96%87%E6%A1%A3_files/1115627-20170401093628414-156623736.png" alt=""></p>
+<p><strong>15、textbox()</strong></p>
+<p><strong>textbox(msg='', title=' ', text='', codebox=0)&nbsp;</strong></p>
+<p>textbox() 函数默认会以比例字体（参数 codebox=1 设置为等宽字体）来显示文本内容（会自动换行哦），这个函数适合用于显示一般的书面文字。 <br>注：text 参数（第三个参数）可以是字符串类型，列表类型，或者元祖类型。</p>
+<p>&nbsp;</p></div><div id="MySignature"></div>
+<div class="clear"></div>
+<div id="blog_post_info_block">
+<div id="BlogPostCategory">分类: <a href="http://www.cnblogs.com/bldly1989/category/976459.html" target="_blank">Python模块</a></div>
+<div id="EntryTag"></div>
+<div id="blog_post_info"><div id="green_channel">
+        <a href="javascript:void(0);" id="green_channel_digg" onclick="DiggIt(6651855,cb_blogId,1);green_channel_success(this,'谢谢推荐！');">好文要顶</a>
+            <a id="green_channel_follow" onclick="follow('452c26d1-28fe-e611-845c-ac853d9f53ac');" href="javascript:void(0);">关注我</a>
+    <a id="green_channel_favorite" onclick="AddToWz(cb_entryId);return false;" href="javascript:void(0);">收藏该文</a>
+    <a id="green_channel_weibo" href="javascript:void(0);" title="分享至新浪微博" onclick="ShareToTsina()"><img src="easygui%E5%AD%A6%E4%B9%A0%E6%96%87%E6%A1%A3_files/icon_weibo_24.png" alt=""></a>
+    <a id="green_channel_wechat" href="javascript:void(0);" title="分享至微信" onclick="shareOnWechat()"><img src="easygui%E5%AD%A6%E4%B9%A0%E6%96%87%E6%A1%A3_files/wechat.png" alt=""></a>
+</div>
+<div id="author_profile">
+    <div id="author_profile_info" class="author_profile_info">
+            <a href="http://home.cnblogs.com/u/bldly1989/" target="_blank"><img src="easygui%E5%AD%A6%E4%B9%A0%E6%96%87%E6%A1%A3_files/sample_face.gif" class="author_avatar" alt=""></a>
+        <div id="author_profile_detail" class="author_profile_info">
+            <a href="http://home.cnblogs.com/u/bldly1989/">无知小德</a><br>
+            <a href="http://home.cnblogs.com/u/bldly1989/followees">关注 - 3</a><br>
+            <a href="http://home.cnblogs.com/u/bldly1989/followers">粉丝 - 13</a>
+        </div>
+    </div>
+    <div class="clear"></div>
+    <div id="author_profile_honor"></div>
+    <div id="author_profile_follow">
+                <a href="javascript:void(0);" onclick="follow('452c26d1-28fe-e611-845c-ac853d9f53ac');return false;">+加关注</a>
+    </div>
+</div>
+<div id="div_digg">
+    <div class="diggit" onclick="votePost(6651855,'Digg')">
+        <span class="diggnum" id="digg_count">0</span>
+    </div>
+    <div class="buryit" onclick="votePost(6651855,'Bury')">
+        <span class="burynum" id="bury_count">0</span>
+    </div>
+    <div class="clear"></div>
+    <div class="diggword" id="digg_tips">
+    </div>
+</div>
+<script type="text/javascript">
+    currentDiggType = 0;
+</script></div>
+<div class="clear"></div>
+<div id="post_next_prev"><a href="http://www.cnblogs.com/bldly1989/p/6625707.html" class="p_n_p_prefix">« </a> 上一篇：<a href="http://www.cnblogs.com/bldly1989/p/6625707.html" title="发布于2017-03-27 11:02">什么是VBA，他有什么作用</a><br><a href="http://www.cnblogs.com/bldly1989/p/6721691.html" class="p_n_p_prefix">» </a> 下一篇：<a href="http://www.cnblogs.com/bldly1989/p/6721691.html" title="发布于2017-04-17 10:34">从关系型数据库到非关系型数据库</a><br></div>
+</div>
+
+
+		</div>
+		<div class="postDesc">posted @ <span id="post-date">2017-03-31 16:01</span> <a href="http://www.cnblogs.com/bldly1989/">无知小德</a> 阅读(<span id="post_view_count">13389</span>) 评论(<span id="post_comment_count">1</span>)  <a href="https://i.cnblogs.com/EditPosts.aspx?postid=6651855" rel="nofollow">编辑</a> <a href="#" onclick="AddToWz(6651855);return false;">收藏</a></div>
+	</div>
+	<script type="text/javascript">var allowComments=true,cb_blogId=336188,cb_entryId=6651855,cb_blogApp=currentBlogApp,cb_blogUserGuid='452c26d1-28fe-e611-845c-ac853d9f53ac',cb_entryCreatedDate='2017/3/31 16:01:00';loadViewCount(cb_entryId);var cb_postType=1;</script>
+	
+</div><!--end: topics 文章、评论容器-->
+</div><a name="!comments"></a><div id="blog-comments-placeholder"><div id="comments_pager_top"></div>
+<!--done-->
+<br>
+<div class="feedback_area_title">评论</div>
+<div class="feedbackNoItems"></div>
+	
+
+		<div class="feedbackItem">
+			<div class="feedbackListSubtitle">
+				<div class="feedbackManage">
+					&nbsp;&nbsp;<span class="comment_actions"></span>
+				</div>
+				<a href="#3875389" class="layer">#1楼</a><a name="3875389" id="comment_anchor_3875389"></a><span id="comment-maxId" style="display:none;">3875389</span><span id="comment-maxDate" style="display:none;">2017/12/27 16:38:17</span> <span class="comment_date">2017-12-27 16:38</span> | <a id="a_comment_author_3875389" href="http://home.cnblogs.com/u/1306254/" target="_blank">娜迦农</a> <a href="http://msg.cnblogs.com/send/%E5%A8%9C%E8%BF%A6%E5%86%9C" title="发送站内短消息" class="sendMsg2This">&nbsp;</a>
+			</div>
+			<div class="feedbackCon">
+				<div id="comment_body_3875389" class="blog_comment_body">比如我学习中编写的py是在D:\mypython下，程序装在D:\python27，那么图片应该放在哪？还需要编写其他代码来让图片显示么？</div><div class="comment_vote"><a href="javascript:void(0);" class="comment_digg" onclick="return voteComment(3875389,'Digg',this)">支持(0)</a><a href="javascript:void(0);" class="comment_bury" onclick="return voteComment(3875389,'Bury',this)">反对(0)</a></div>
+			</div>
+		</div>
+	<div id="comments_pager_bottom"></div></div><script type="text/javascript">var commentManager = new blogCommentManager();commentManager.renderComments(0);</script>
+<div id="comment_form" class="commentform">
+<a name="commentform"></a>
+<div id="divCommentShow"></div>
+<div id="comment_nav"><span id="span_refresh_tips"></span><a href="javascript:void(0);" onclick="return RefreshCommentList();" id="lnk_RefreshComments" runat="server" clientidmode="Static">刷新评论</a><a href="#" onclick="return RefreshPage();">刷新页面</a><a href="#top">返回顶部</a></div>
+<div id="comment_form_container"><div class="login_tips">注册用户登录后才能发表评论，请 <a rel="nofollow" href="javascript:void(0);" class="underline" onclick="return login('commentform');">登录</a> 或 <a rel="nofollow" href="javascript:void(0);" class="underline" onclick="return register();">注册</a>，<a href="http://www.cnblogs.com/">访问</a>网站首页。</div></div>
+<div class="ad_text_commentbox" id="ad_text_under_commentbox"></div>
+<div id="ad_t2"><a href="http://www.ucancode.com/index.htm" target="_blank">【推荐】超50万VC++源码: 大型组态工控、电力仿真CAD与GIS源码库！</a><br><a href="https://cloud.tencent.com/developer/labs?fromSource=gwzcw.1087957.1087957.1087957" target="_blank" onclick="ga('send', 'event', 'Link', 'click', 'T2-T2 - 腾讯云')">【推荐】如何快速搭建人工智能应用？</a><br><a href="http://challenge.xfyun.cn/?ch=bk" target="_blank" onclick="ga('send', 'event', 'Link', 'click', 'T2-xfyun')">【大赛】2018首届“顶天立地”AI开发者大赛</a><br></div>
+<div id="opt_under_post"></div>
+<div id="cnblogs_c1" class="c_ad_block"><a href="https://cloud.tencent.com/act/campus?fromSource=gwzcw.1087959.1087959.1087959" target="_blank"><img src="easygui%E5%AD%A6%E4%B9%A0%E6%96%87%E6%A1%A3_files/24442-20180710085714894-1703644023.jpg" alt="腾讯云0710" onclick="ga('send', 'event', 'Link', 'click', 'C1');" width="300" height="250"></a></div>
+<div id="under_post_news"><div class="itnews c_ad_block"><b>最新IT新闻</b>:<br> ·  <a href="https://news.cnblogs.com/n/601856/" target="_blank">可怕！大西洋73％的深海鱼体内有塑料微粒</a><br> ·  <a href="https://news.cnblogs.com/n/601857/" target="_blank">华大基因就无创产检发公开信 呼吁孕妈妈相信科技</a><br> ·  <a href="https://news.cnblogs.com/n/601858/" target="_blank">189元就能换iPhone X屏幕？碎屏险背后的猫腻</a><br> ·  <a href="https://news.cnblogs.com/n/601855/" target="_blank">拒绝令解除！中兴通讯A股涨停 H股大涨逾16%</a><br> ·  <a href="https://news.cnblogs.com/n/601854/" target="_blank">阿里云支撑国内互联网70％世界杯流量：FIFA主席盛赞</a><br>» <a href="http://news.cnblogs.com/" title="IT新闻" target="_blank">更多新闻...</a></div></div>
+<div id="cnblogs_c2" class="c_ad_block"><a href="http://click.aliyun.com/m/9667/" target="_blank"><img src="easygui%E5%AD%A6%E4%B9%A0%E6%96%87%E6%A1%A3_files/TB1iQKbhqmWBuNjy1XaXXXCbXXa-468-60.jpg" alt="" style="width: 468px; height: 60px;"></a></div>
+<div id="under_post_kb"><div class="itnews c_ad_block" id="kb_block"><b>最新知识库文章</b>:<br><div id="kb_recent"> ·  <a href="http://kb.cnblogs.com/page/598963/" target="_blank">危害程序员职业生涯的三大观念</a><br> ·  <a href="http://kb.cnblogs.com/page/601061/" target="_blank">断点单步跟踪是一种低效的调试方法</a><br> ·  <a href="http://kb.cnblogs.com/page/600804/" target="_blank">测试 | 让每一粒尘埃有的放矢</a><br> ·  <a href="http://kb.cnblogs.com/page/599854/" target="_blank">从Excel到微服务</a><br> ·  <a href="http://kb.cnblogs.com/page/522513/" target="_blank">如何提升你的能力？给年轻程序员的几条建议</a><br></div>» <a href="http://kb.cnblogs.com/" target="_blank">更多知识库文章...</a></div></div>
+<div id="HistoryToday" class="c_ad_block"></div>
+<script type="text/javascript">
+    fixPostBody();
+    setTimeout(function () { incrementViewCount(cb_entryId); }, 50);
+    deliverAdT2();
+    deliverAdC1();
+    deliverAdC2();    
+    loadNewsAndKb();
+    loadBlogSignature();
+    LoadPostInfoBlock(cb_blogId, cb_entryId, cb_blogApp, cb_blogUserGuid);
+    GetPrevNextPost(cb_entryId, cb_blogId, cb_entryCreatedDate, cb_postType);
+    loadOptUnderPost();
+    GetHistoryToday(cb_blogId, cb_blogApp, cb_entryCreatedDate);   
+</script>
+</div>
+
+
+	</div><!--end: forFlow -->
+	</div><!--end: mainContent 主体内容容器-->
+
+	<div id="sideBar">
+		<div id="sideBarMain">
+			
+<!--done-->
+<div class="newsItem">
+<h3 class="catListTitle">公告</h3>
+	<div id="blog-news"><div id="profile_block">昵称：<a href="https://home.cnblogs.com/u/bldly1989/">无知小德</a><br>园龄：<a href="https://home.cnblogs.com/u/bldly1989/" title="入园时间：2017-03-01">1年4个月</a><br>粉丝：<a href="https://home.cnblogs.com/u/bldly1989/followers/">13</a><br>关注：<a href="https://home.cnblogs.com/u/bldly1989/followees/">3</a><div id="p_b_follow"><a href="javascript:void(0);" onclick="follow('452c26d1-28fe-e611-845c-ac853d9f53ac')">+加关注</a></div><script>getFollowStatus('452c26d1-28fe-e611-845c-ac853d9f53ac')</script></div></div><script type="text/javascript">loadBlogNews();</script>
+</div>
+
+			<div id="calendar"><div id="blog-calendar" style=""><table id="blogCalendar" class="Cal" title="Calendar" cellspacing="0" cellpadding="0">
+	<tbody><tr><td colspan="7"><table class="CalTitle" cellspacing="0">
+		<tbody><tr><td class="CalNextPrev"><a href="javascript:void(0);" onclick="loadBlogCalendar('2018/06/01');return false;">&lt;</a></td><td align="center">2018年7月</td><td class="CalNextPrev" align="right"><a href="javascript:void(0);" onclick="loadBlogCalendar('2018/08/01');return false;">&gt;</a></td></tr>
+	</tbody></table></td></tr><tr><th class="CalDayHeader" abbr="日" scope="col" align="center">日</th><th class="CalDayHeader" abbr="一" scope="col" align="center">一</th><th class="CalDayHeader" abbr="二" scope="col" align="center">二</th><th class="CalDayHeader" abbr="三" scope="col" align="center">三</th><th class="CalDayHeader" abbr="四" scope="col" align="center">四</th><th class="CalDayHeader" abbr="五" scope="col" align="center">五</th><th class="CalDayHeader" abbr="六" scope="col" align="center">六</th></tr><tr><td class="CalOtherMonthDay" align="center">24</td><td class="CalOtherMonthDay" align="center">25</td><td class="CalOtherMonthDay" align="center">26</td><td class="CalOtherMonthDay" align="center">27</td><td class="CalOtherMonthDay" align="center">28</td><td class="CalOtherMonthDay" align="center">29</td><td class="CalOtherMonthDay" align="center">30</td></tr><tr><td class="CalWeekendDay" align="center">1</td><td align="center">2</td><td align="center">3</td><td align="center">4</td><td align="center">5</td><td align="center">6</td><td class="CalWeekendDay" align="center">7</td></tr><tr><td class="CalWeekendDay" align="center">8</td><td align="center">9</td><td align="center">10</td><td align="center">11</td><td align="center">12</td><td align="center">13</td><td class="CalWeekendDay" align="center">14</td></tr><tr><td class="CalWeekendDay" align="center">15</td><td class="CalTodayDay" align="center">16</td><td align="center">17</td><td align="center">18</td><td align="center">19</td><td align="center">20</td><td class="CalWeekendDay" align="center">21</td></tr><tr><td class="CalWeekendDay" align="center">22</td><td align="center">23</td><td align="center">24</td><td align="center">25</td><td align="center">26</td><td align="center">27</td><td class="CalWeekendDay" align="center">28</td></tr><tr><td class="CalWeekendDay" align="center">29</td><td align="center">30</td><td align="center">31</td><td class="CalOtherMonthDay" align="center">1</td><td class="CalOtherMonthDay" align="center">2</td><td class="CalOtherMonthDay" align="center">3</td><td class="CalOtherMonthDay" align="center">4</td></tr>
+</tbody></table></div><script type="text/javascript">loadBlogDefaultCalendar();</script></div>
+			
+			<div id="leftcontentcontainer">
+				<div id="blog-sidecolumn"><div id="sidebar_search" class="sidebar-block">
+<div id="sidebar_search" class="mySearch">
+<h3 class="catListTitle">搜索</h3>
+<div id="sidebar_search_box">
+<div id="widget_my_zzk" class="div_my_zzk"><input id="q" onkeydown="return zzk_go_enter(event);" class="input_my_zzk" type="text">&nbsp;<input onclick="zzk_go()" value="找找看" id="btnZzk" class="btn_my_zzk" type="button"></div>
+<div id="widget_my_google" class="div_my_zzk"><input name="google_q" id="google_q" onkeydown="return google_go_enter(event)" class="input_my_zzk" type="text">&nbsp;<input onclick="google_go()" value="谷歌搜索" class="btn_my_zzk" type="button"></div>
+</div>
+</div>
+
+</div><div id="sidebar_shortcut" class="sidebar-block">
+<div class="catListLink">
+<h3 class="catListTitle">常用链接</h3>
+<ul>
+<li><a href="http://www.cnblogs.com/bldly1989/p/" title="我的博客的随笔列表">我的随笔</a></li><li><a href="http://www.cnblogs.com/bldly1989/MyComments.html" title="我发表过的评论列表">我的评论</a></li><li><a href="http://www.cnblogs.com/bldly1989/OtherPosts.html" title="我评论过的随笔列表">我的参与</a></li><li><a href="http://www.cnblogs.com/bldly1989/RecentComments.html" title="我的博客的评论列表">最新评论</a></li><li><a href="http://www.cnblogs.com/bldly1989/tag/" title="我的博客的标签列表">我的标签</a></li>
+<li><a id="itemListLink" onclick="this.blur();WarpClass('itemListLink', 'itemListLin_con');return false;" href="#">更多链接</a></li>
+</ul>
+<div id="itemListLin_con" style="display:none;">
+<ul>
+
+</ul>
+</div>
+</div></div><div id="sidebar_toptags" class="sidebar-block"></div><div id="sidebar_categories">
+<div class="catListPostCategory">
+<h3 class="catListTitle">随笔分类</h3>
+
+<ul>
+
+<li><a id="CatList_LinkList_0_Link_0" href="https://www.cnblogs.com/bldly1989/category/1038383.html">Firewalld漫谈(9)</a> </li>
+
+<li><a id="CatList_LinkList_0_Link_1" href="https://www.cnblogs.com/bldly1989/category/1011778.html">Linux OPS学习笔记(22)</a> </li>
+
+<li><a id="CatList_LinkList_0_Link_2" href="https://www.cnblogs.com/bldly1989/category/961315.html">Python基础(16)</a> </li>
+
+<li><a id="CatList_LinkList_0_Link_3" href="https://www.cnblogs.com/bldly1989/category/976459.html">Python模块(1)</a> </li>
+
+<li><a id="CatList_LinkList_0_Link_4" href="https://www.cnblogs.com/bldly1989/category/973456.html">VBA初识(1)</a> </li>
+
+<li><a id="CatList_LinkList_0_Link_5" href="https://www.cnblogs.com/bldly1989/category/992380.html">Zabbix</a> </li>
+
+<li><a id="CatList_LinkList_0_Link_6" href="https://www.cnblogs.com/bldly1989/category/985696.html">数据库(2)</a> </li>
+
+</ul>
+
+</div>
+
+<div class="catListPostArchive">
+<h3 class="catListTitle">随笔档案</h3>
+
+<ul>
+
+<li><a id="CatList_LinkList_1_Link_0" href="https://www.cnblogs.com/bldly1989/archive/2017/09.html">2017年9月 (1)</a> </li>
+
+<li><a id="CatList_LinkList_1_Link_1" href="https://www.cnblogs.com/bldly1989/archive/2017/08.html">2017年8月 (3)</a> </li>
+
+<li><a id="CatList_LinkList_1_Link_2" href="https://www.cnblogs.com/bldly1989/archive/2017/07.html">2017年7月 (13)</a> </li>
+
+<li><a id="CatList_LinkList_1_Link_3" href="https://www.cnblogs.com/bldly1989/archive/2017/06.html">2017年6月 (14)</a> </li>
+
+<li><a id="CatList_LinkList_1_Link_4" href="https://www.cnblogs.com/bldly1989/archive/2017/04.html">2017年4月 (2)</a> </li>
+
+<li><a id="CatList_LinkList_1_Link_5" href="https://www.cnblogs.com/bldly1989/archive/2017/03.html">2017年3月 (18)</a> </li>
+
+</ul>
+
+</div>
+
+</div><div id="sidebar_recentcomments" class="sidebar-block"><div id="recent_comments_wrap">
+<div class="catListComment">
+<h3 class="catListTitle">最新评论</h3>
+
+	<div id="RecentCommentsBlock"><ul>
+        <li class="recent_comment_title"><a href="http://www.cnblogs.com/bldly1989/p/6651855.html#3875389">1. Re:一、Python 模块EasyGui详细介绍</a></li>
+        <li class="recent_comment_body">比如我学习中编写的py是在D:\mypython下，程序装在D:\python27，那么图片应该放在哪？还需要编写其他代码来让图片显示么？</li>
+        <li class="recent_comment_author">--娜迦农</li>
+</ul>
+</div>
+</div>
+</div></div><div id="sidebar_topviewedposts" class="sidebar-block"><div id="topview_posts_wrap">
+<div class="catListView">
+<h3 class="catListTitle">阅读排行榜</h3>
+	<div id="TopViewPostsBlock"><ul><li><a href="https://www.cnblogs.com/bldly1989/p/6651855.html">1. 一、Python 模块EasyGui详细介绍(13389)</a></li><li><a href="https://www.cnblogs.com/bldly1989/p/6625707.html">2. 什么是VBA，他有什么作用(7194)</a></li><li><a href="https://www.cnblogs.com/bldly1989/p/6721758.html">3. 一文读懂非关系型数据库（NoSQL）(7097)</a></li><li><a href="https://www.cnblogs.com/bldly1989/p/7204358.html">4. linux的审计功能（audit）(4950)</a></li><li><a href="https://www.cnblogs.com/bldly1989/p/6949888.html">5. linux中普通用户修改密码出现（passwd：Authentication token manipulation error）(3291)</a></li></ul></div>
+</div>
+</div></div><div id="sidebar_topcommentedposts" class="sidebar-block"><div id="topfeedback_posts_wrap">
+<div class="catListFeedback">
+<h3 class="catListTitle">评论排行榜</h3>
+	<div id="TopFeedbackPostsBlock"><ul><li><a href="https://www.cnblogs.com/bldly1989/p/6651855.html">1. 一、Python 模块EasyGui详细介绍(1)</a></li></ul></div>
+</div>
+</div></div><div id="sidebar_topdiggedposts" class="sidebar-block"><div id="topdigg_posts_wrap">
+<div class="catListView">
+<h3 class="catListTitle">推荐排行榜</h3>
+<div id="TopDiggPostsBlock"><ul><li><a href="https://www.cnblogs.com/bldly1989/p/6721758.html">1. 一文读懂非关系型数据库（NoSQL）(4)</a></li></ul></div>
+</div></div></div></div><script type="text/javascript">loadBlogSideColumn();</script>
+			</div>
+			
+		</div><!--end: sideBarMain -->
+	</div><!--end: sideBar 侧边栏容器 -->
+	<div class="clear"></div>
+	</div><!--end: main -->
+	<div class="clear"></div>
+	<div id="footer">
+		
+<!--done-->
+Copyright ©2018 无知小德
+	</div><!--end: footer -->
+</div><!--end: home 自定义的最大容器 -->
+
+
+</body></html>
